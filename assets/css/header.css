@@ -1,0 +1,255 @@
+header {
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    transition: all 1s cubic-bezier(.21,.6,.35,1);
+}
+
+header.active {
+    background-color: #fff;
+}
+
+header.menu-open {
+    background-color: #fff;
+}
+
+header .header-wrapper {
+    gap: 18px;
+    min-height: var(--header-height);
+}
+
+header .brand h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    position: relative;
+    font-size: 40px;
+    color: white;
+}
+
+header.menu-open h1 {
+    color: black;
+}
+
+header.active h1 {
+    color: black;
+}
+
+header a {
+    color: inherit;
+}
+
+header a::after {
+    display: none !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    border: 0;
+    background: transparent;
+    color: white;
+    position: relative;
+    z-index: 110;
+}
+
+header.active .menu-toggle,
+header.menu-open .menu-toggle {
+    color: black;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 0;
+    background-color: currentColor;
+    transition: transform 200ms ease, opacity 200ms ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-toggle .bar-1 {
+    transform: translate(-50%, -50%) translateY(-7px);
+}
+
+.menu-toggle .bar-3 {
+    transform: translate(-50%, -50%) translateY(7px);
+}
+
+header.menu-open .menu-toggle .bar-1 {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+header.menu-open .menu-toggle .bar-2 {
+    opacity: 0;
+}
+
+header.menu-open .menu-toggle .bar-3 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.site-nav .nav-link {
+    font-family: 'Nunito-Regular';
+    font-size: 20px;
+    letter-spacing: 0.08rem;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    padding: 6px 0;
+}
+
+header.active .site-nav .nav-link {
+    color: black;
+}
+
+.site-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0.7;
+    transition: width 300ms ease;
+}
+
+.site-nav .nav-link:hover::after,
+.site-nav .nav-link.is-active::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-nav {
+        position: fixed;
+        inset: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        padding: 120px 24px 40px;
+        background-color: #fff;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(100%);
+        transition: opacity 200ms ease, transform 280ms ease;
+        z-index: 105;
+    }
+
+    header.menu-open .site-nav {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .site-nav .nav-link {
+        font-size: 18px;
+        letter-spacing: 0.08rem;
+        color: black;
+    }
+}
+
+footer {
+    background-color: #faf2e6;
+    padding: 50px var(--padding) 70px;
+}
+
+footer .social-links {
+    column-gap: 10px;
+}
+
+footer .review-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    margin-top: 10px;
+    border: 1px solid #d7b08a;
+    border-radius: 999px;
+    background-color: #fff;
+    color: #7a4b1f;
+    font-family: 'Nunito-SemiBold';
+    cursor: pointer;
+}
+
+footer .review-link::after {
+    content: none;
+}
+
+footer .review-link:hover {
+    opacity: 1;
+    background-color: #fff7ef;
+}
+
+footer .social-links img {
+    width: 40px;
+    height: auto;
+}
+
+footer .copyright-text {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.header-logo {
+    max-height: 90px;
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+
+header .header-logo.black-logo {
+    display: none;
+}
+
+header .header-logo.white-logo {
+    display: block;
+}
+
+header.active .header-logo.black-logo {
+    display: block;
+}
+
+header.active .header-logo.white-logo {
+    display: none;
+}

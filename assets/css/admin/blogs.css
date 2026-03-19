@@ -1,0 +1,446 @@
+/* Admin Dashboard Styles */
+
+/* Admin Header Navigation */
+.admin-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.admin-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.admin-nav-left,
+.admin-nav-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin-nav a {
+    color: white !important;
+    font-family: 'Nunito-Regular';
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.admin-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.admin-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.admin-icon--lg {
+    width: 18px;
+    height: 18px;
+}
+
+.admin-nav .admin-icon {
+    margin-right: 8px;
+}
+
+.admin-nav a::after {
+    display: none;
+}
+
+.admin-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+}
+
+.admin-nav .admin-brand {
+    font-family: 'Tenor-Regular';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.admin-logout {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.admin-logout:hover {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Main Content Area */
+.admin-content {
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 60px);
+    padding: 30px 0;
+}
+
+.admin-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* Page Header */
+.admin-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-page-title {
+    font-family: 'Tenor-Regular';
+    font-size: 32px;
+    color: #2d3748;
+    margin: 0;
+}
+
+/* Buttons */
+.mw-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Nunito-Regular';
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+}
+
+.mw-button .admin-icon {
+    margin-right: 8px;
+    vertical-align: text-bottom;
+}
+
+.mw-button::after {
+    display: none !important;
+}
+
+.add-blog {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
+}
+
+.add-blog:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+    opacity: 1;
+}
+
+.edit-button {
+    background-color: #48bb78;
+    color: white !important;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.edit-button:hover {
+    background-color: #38a169;
+    opacity: 1;
+}
+
+.delete-button {
+    background-color: #f56565;
+    color: white !important;
+    padding: 8px 16px;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: #e53e3e;
+    opacity: 1;
+}
+
+/* Table Card */
+.table-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f7fafc;
+}
+
+th {
+    padding: 16px 20px;
+    text-align: left;
+    font-family: 'Nunito-SemiBold';
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5568;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 16px 20px;
+    font-family: 'Nunito-Light';
+    font-size: 14px;
+    color: #2d3748;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Image Thumbnails */
+td img {
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Action Buttons Container */
+td .action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Empty State */
+.text-center {
+    text-align: center;
+    padding: 60px 20px;
+    color: #718096;
+    font-family: 'Nunito-Light';
+    font-size: 16px;
+}
+
+/* Form Styles */
+.form-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 900px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Nunito-SemiBold';
+    font-size: 14px;
+    color: #2d3748;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Nunito-Light';
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.custom-file {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.custom-file-input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(2.25rem + 2px);
+    padding: 12px 16px;
+    font-family: 'Nunito-Light';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #718096;
+    background-color: #fff;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-file-label::after {
+    content: "Browse";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(2.25rem);
+    padding: 12px 16px;
+    line-height: 1.5;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 0 6px 6px 0;
+}
+
+.custom-file-input:hover ~ .custom-file-label {
+    border-color: #667eea;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    padding: 12px 30px;
+    font-family: 'Nunito-SemiBold';
+    font-size: 15px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-cancel {
+    background-color: #e2e8f0;
+    color: #4a5568 !important;
+    padding: 12px 30px;
+    font-family: 'Nunito-SemiBold';
+    font-size: 15px;
+}
+
+.btn-cancel:hover {
+    background-color: #cbd5e0;
+}
+
+/* Image Preview */
+.image-preview {
+    margin-bottom: 20px;
+}
+
+.image-preview img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .admin-nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .admin-nav-left,
+    .admin-nav-right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .admin-nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .admin-page-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .table-card {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    td .action-buttons {
+        flex-direction: column;
+    }
+
+    .delete-button {
+        margin-left: 0;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .mw-button {
+        width: 100%;
+    }
+}

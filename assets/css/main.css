@@ -1,0 +1,349 @@
+/****************************************
+	Reset
+****************************************/
+
+/* Change Autocomplete styles in Chrome*/
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-animation: autofill 0s forwards;
+    animation: autofill 0s forwards;
+}
+
+@keyframes autofill {
+    100% {
+        background: transparent;
+        color: inherit;
+    }
+}
+
+@-webkit-keyframes autofill {
+    100% {
+        background: transparent;
+        color: inherit;
+    }
+}
+
+/****************************************
+	Color Palette
+****************************************/
+
+/* .black-bg {
+    background-color: black;
+} */
+
+/****************************************
+	Typography
+****************************************/
+
+@font-face {
+    font-family: 'Nunito-SemiBold';    
+    src: url('../fonts/NunitoSans_10pt-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';    
+    src: url('../fonts/NunitoSans_10pt-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito-Light';    
+    src: url('../fonts/NunitoSans_7pt-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alethiapro-Regular';    
+    src: url('../fonts/alethiapro-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tenor-Regular';    
+    src: url('../fonts/TenorSans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cursive';    
+    src: url('../fonts/cursive.otf') format('opentype');
+}
+
+
+/****************************************
+	Common
+****************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    color: black;
+    height: 100%;
+    letter-spacing: 0.03rem;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+a,
+button {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+/****************************************
+	Typography
+****************************************/
+
+a,
+a:before,
+a:after {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+/****************************************
+	Flexbox Helper
+****************************************/ 
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-right {
+    justify-content: flex-end;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-vcenter {
+    align-items: center;
+}
+
+.flex-start {
+    align-content: flex-start;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-auto {
+    flex: 0 1 auto;
+}
+
+.flex-bottom {
+    align-items: flex-end;
+}
+
+.flex-spread {
+    justify-content: space-between;
+}
+
+/*============================================================================
+  #Tables
+==============================================================================*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.full {
+    width: 100%;
+    margin-bottom: 0.5em;
+    min-width: 1200px;
+}
+
+.table-wrap {
+    max-width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+tr {
+    border: none;
+    border-bottom: 1px solid #CFD4D2;
+}
+
+th,
+td {
+    border: none;
+    text-align: left;
+    padding: 15px 0px;
+}
+
+td {
+    font-family: "Nunito-Light";
+    font-size: 14px;
+}
+
+th {
+    padding: 10px 0px;
+    color: #CFD4D2;
+    font-family: 'Tenor-Regular';
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/****************************************
+	Custom Styles
+****************************************/ 
+
+h1 {
+    font-family: 'Tenor-Regular';
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Tenor-Regular';
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Tenor-Regular';
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+a, p, li {
+    font-family: 'Nunito-Light';
+    font-size: 14px;
+    color: #5c5c5c;
+    line-height: 1.4;
+}
+
+strong {
+    font-family: 'Nunito-SemiBold';
+}
+
+a {
+    position: relative;
+    transition: all 300ms ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background-color: #5c5c5c;
+    opacity: 0.7;
+    transition: all 300ms ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.container {
+    padding: 25px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.max-width {
+    max-width: 1425px;
+    margin: auto;
+}
+
+.padding-left {
+    padding-left: 25px;
+}
+
+.padding-right {
+    padding-right: 25px;
+}
+
+a:focus, 
+a:not([disabled]):hover {
+    color: initial;
+}
+
+.caption {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.button {
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid #bca5de;
+    background-color: #bca5de;
+    transition: all 300ms ease;
+    color: white !important;
+    line-height: 1 !important;
+    height: 35px;
+    white-space: nowrap;
+    width: fit-content;
+    margin-left: auto;
+    opacity: 1 !important;
+}
+
+.button::after {
+    display: none;
+}
+
+.button:hover {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.4);
+}
+
+:root {
+    --header-height: 140px;
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --header-height: 90px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .padding-left {
+        padding-left: 20px;
+    }
+
+    .padding-right {
+        padding-right: 20px;
+    }
+
+
+}

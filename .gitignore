@@ -1,0 +1,31 @@
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.idea/
+.vscode/
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# CodeIgniter runtime
+/application/cache/*
+!/application/cache/index.html
+/application/logs/*
+!/application/logs/index.html
+
+# Env/config secrets
+.env
+*.log
+
+# Uploads
+/uploads/*
+
+#admin
+/application/controllers/admin/AdminController.php
+/application/config/config.php
+/application/config/database.php
+/vendor/
+
+/vendor/
