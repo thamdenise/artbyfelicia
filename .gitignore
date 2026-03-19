@@ -1,10 +1,3 @@
-.DS_Store
-Thumbs.db
-
-# IDE/editor
-.idea/
-.vscode/
-
 # Dependencies
 /vendor/
 /node_modules/
@@ -22,10 +15,6 @@ Thumbs.db
 # Uploads
 /uploads/*
 
-#admin
 /application/controllers/admin/AdminController.php
 /application/config/config.php
 /application/config/database.php
-/vendor/
-
-/vendor/
